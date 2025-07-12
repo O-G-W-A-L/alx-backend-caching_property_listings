@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+bin/
+include/
+lib/
+lib64/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Django
+*.log
+*.pot
+*.mo
+*.js.map
+*.css.map
+local_settings.py
+db.sqlite3
+media/
+static/
+
+# IDEs
+.vscode/
+.idea/
+*.iml
+
+# OS generated files
+.DS_Store
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Docker
+*.env
+.dockerignore
+docker-compose.override.yml
