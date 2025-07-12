@@ -8,5 +8,5 @@ def get_all_properties():
     properties = cache.get('all_properties')
     if not properties:
         properties = list(Property.objects.all())
-        cache.set('all_properties', properties, 3600)  # Cache for 1 hour
+        cache.set('all_properties', properties, 3600)  # Cache for 1 hour ehhh ahna
     return properties
