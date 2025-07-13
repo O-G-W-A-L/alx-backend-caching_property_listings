@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-ka26@3qed@p-0)*fv*+3qg2cy-p#4g3p1dn@s(xqf$ed!ozg^e'
+SECRET_KEY = 'django-insecure-6eb+o=em=pt%o8vc9!n*)1*wr*mteocb*rha%a*ko3gvp_+%eg'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_redis',
-    'properties',  # Custom app for property listings
+    'properties',
 ]
 
 MIDDLEWARE = [
@@ -75,12 +75,18 @@ WSGI_APPLICATION = 'alx_backend_caching_property_listings.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'property_db',
+        'USER': 'hunt',
+        'PASSWORD': 'securepassword',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
+
 
 
 # Password validation
@@ -124,16 +130,6 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'property_db',
-        'USER': 'postgres',
-        'PASSWORD': 'postgres_password',
-        'HOST': 'postgres',
-        'PORT': '5432',
-    }
-}
 CACHES = {
     "default": {
         "BACKEND": "django_redis.cache.RedisCache",
